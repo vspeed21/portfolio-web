@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio web - Victor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="header contenedor">
+      <div class="logo">
+        <a href="#">
+          <h1 class="titulo" id="inicio">TiKoDev</h1>
+        </a>
+      </div>
+
+      <nav class="nav-wrapper">
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="#sobremi" class="nav-menu-link">Sobre mí</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#skills" class="nav-menu-link">Skills</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#proyectos" class="nav-menu-link">Proyectos</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#contacto" class="nav-menu-link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="inicio contenedor">
+      <div class="inicio-flex">
+        <div class="texto">
+          <h2>Hola, soy <span id="typed"></span></h2>
+          <p>Transformo tu idea a codigo. Desarrollo tu pagina web deseada</p>
+        </div>
+
+        <div class="logo">
+          <p class="degradado">&lt;/&gt;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="sobremi">
+    <h2>Sobre mi</h2>
+
+    <div class="sobremi-contenedor contenedor">
+      <div class="acordeon-contenedor">
+
+        <div class="acordeon">
+          <div class="bloque">
+            <h3 class="titular">Datos generales</h3>
+            <div class="contenido">
+              <p>
+                Mi nombre es Victor Torres, tengo 19 años. Soy Hondureño y me especializo en el desarrollo FrontEnd pero espero ser un desarrollador FullStack.</p>
+              
+                <p>Me considero una persona responsable, honesta, apasionado en mi área. He realizado diversos sitios web con diferentes tecnologías que me han permitido practicar mis conocimientos y así obtener cierto nivel de experiencia.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="acordeon">
+          <div class="bloque">
+            <h3 class="titular">Estudios</h3>
+            <div class="contenido">
+              <p>Me gradue de Bachillerato en Informatica. Actualmente sigo mis estudios en la universidad, cursando Ingenieria en sistemas.</p>
+
+              <p>Mis conocimientos sobre varias tecnologías las he aprendido viendo tutoriales en YouTube o leyendo documentaciones</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="acordeon">
+          <div class="bloque">
+            <h3 class="titular">Hobbies</h3>
+            <div class="contenido">
+              <p>En mi tiempo libre me gusta:</p>
+
+              <ul>
+                <li>Mirar Netflix</li>
+                <li>Escuchar musica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img 
+          src="img/about.png" 
+          alt="about" 
+          class="imagen-about"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="contenedor">
+      <div class="skills-flex">
+        <div class="skills-contenedor">
+          <div class="flex skills-nombre">
+            <p>CSS</p>
+            <div class="progress css"></div>
+          </div>
+
+          <div class="flex skills-nombre">
+            <p>SASS</p>
+            <div class="progress sass"></div>
+          </div>
+
+          <div class="flex skills-nombre">
+            <p>Tailwindcss</p>
+            <div class="progress tailwindcss"></div>
+          </div>
+
+          <div class="flex skills-nombre">
+            <p>JavaScript</p>
+            <div class="progress js"></div>
+          </div>
+
+          <div class="flex skills-nombre">
+            <p>React</p>
+            <div class="progress react"></div>
+          </div>
+        </div>
+
+        <div class="skills-img">
+          <img src="img/skills_cloud.png" alt="img skills">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proyectos contenedor" id="proyectos">
+    <h2>Mis proyectos</h2>
+    <div class="contenedor-tabs">
+      <ul class="pestanas">
+        <li class="active">CSS</li>
+        <li>SASS</li>
+        <li>React</li>
+      </ul>
+
+      <div class="contenido-pestanas">
+        <div class="bloque active">
+          <div class="bloque-grid">
+            <div class="card">
+              <h3>Audifonos TechPro</h3>
+              <a href="" class="imagen-proyecto">
+                <img src="img/400x300.png" alt="imagen proyecto">
+              </a>
+  
+              <div class="tecnologias">
+                <img src="img/html.png" alt="logo tecnologia">
+                <img src="img/css.png" alt="logo tecnologia">
+              </div>
+  
+              <div class="descripcion">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, rerum optio alias mollitia vel necessitatibus cumque</p>
+              </div>
+  
+              <div class="botones">
+                <a href="#" class="btn-proyecto">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                  </svg>
+                  <span>Ver proyecto</span>
+                </a>
+                <a href="#" class="btn-git">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                  </svg>
+                  <span>Github</span>
+                </a>
+              </div>
+            </div>
+  
+            <div class="card">
+              <h3>Audifonos TechPro</h3>
+              <a href="" class="imagen-proyecto">
+                <img src="img/400x300.png" alt="imagen proyecto">
+              </a>
+  
+              <div class="tecnologias">
+                <img src="img/html.png" alt="logo tecnologia">
+                <img src="img/css.png" alt="logo tecnologia">
+              </div>
+  
+              <div class="descripcion">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, rerum optio alias mollitia vel necessitatibus cumque</p>
+              </div>
+  
+              <div class="botones">
+                <a href="#" class="btn-proyecto">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                  </svg>
+                  <span>Ver proyecto</span>
+                </a>
+                <a href="#" class="btn-git">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                  </svg>
+                  <span>Github</span>
+                </a>
+              </div>
+            </div>
+  
+            <div class="card">
+              <h3>Audifonos TechPro</h3>
+              <a href="" class="imagen-proyecto">
+                <img src="img/400x300.png" alt="imagen proyecto">
+              </a>
+  
+              <div class="tecnologias">
+                <img src="img/html.png" alt="logo tecnologia">
+                <img src="img/css.png" alt="logo tecnologia">
+              </div>
+  
+              <div class="descripcion">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, rerum optio alias mollitia vel necessitatibus cumque</p>
+              </div>
+  
+              <div class="botones">
+                <a href="#" class="btn-proyecto">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                  </svg>
+                  <span>Ver proyecto</span>
+                </a>
+                <a href="#" class="btn-git">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                  </svg>
+                  <span>Github</span>
+                </a>
+              </div>
+            </div>
+  
+            <div class="card">
+              <h3>Audifonos TechPro</h3>
+              <a href="" class="imagen-proyecto">
+                <img src="img/400x300.png" alt="imagen proyecto">
+              </a>
+  
+              <div class="tecnologias">
+                <img src="img/html.png" alt="logo tecnologia">
+                <img src="img/css.png" alt="logo tecnologia">
+              </div>
+  
+              <div class="descripcion">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, rerum optio alias mollitia vel necessitatibus cumque</p>
+              </div>
+  
+              <div class="botones">
+                <a href="#" class="btn-proyecto">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="10" cy="10" r="7" />
+                    <line x1="21" y1="21" x2="15" y2="15" />
+                  </svg>
+                  <span>Ver proyecto</span>
+                </a>
+                <a href="#" class="btn-git">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                  </svg>
+                  <span>Github</span>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="bloque">
+          <div class="card">
+            <h3>Nombre proyecto</h3>
+            <div class="imagen-proyecto">
+              <img src="" alt="imagen proyecto">
+            </div>
+
+            <div class="tecnologias">
+              <img src="img/html.png" alt="logo tecnologia">
+              <img src="img/css.png" alt="logo tecnologia">
+            </div>
+
+            <div class="descripcion">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, rerum optio alias mollitia vel necessitatibus cumque</p>
+            </div>
+
+            <a href="">Github</a>
+            <a href="">Ver proyecto</a>
+          </div>
+        </div>
+
+        <div class="bloque">
+          <div class="card">
+            <h3>Nombre proyecto</h3>
+            <div class="imagen-proyecto">
+              <img src="" alt="imagen proyecto">
+            </div>
+
+            <div class="tecnologias">
+              <img src="img/html.png" alt="logo tecnologia">
+              <img src="img/css.png" alt="logo tecnologia">
+            </div>
+
+            <div class="descripcion">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, rerum optio alias mollitia vel necessitatibus cumque</p>
+            </div>
+
+            <a href="">Github</a>
+            <a href="">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
