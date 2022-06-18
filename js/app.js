@@ -43,7 +43,7 @@ function acordeon() {
   titulares.forEach( (titular, i) => {
     titular.addEventListener('click', () => {
 
-      bloques.forEach( (bloque, i) => {
+      bloques.forEach( bloque => {
         bloque.classList.remove('active');
       });
 

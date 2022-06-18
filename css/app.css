@@ -5,6 +5,7 @@
   --secundario: #1363DF;
   --terciario: #2129bb;
   --grisClaro: #eee;
+  --colorSombra: #7d8b92;
 }
 
 /* Generales y formateo de fuente*/
@@ -554,6 +555,15 @@ a{
   border-radius: .5rem;
   overflow: visible;
   margin-bottom: 1rem;
+  z-index: 1;
+  box-shadow: 0 0 2.6rem -0.8rem var(--colorSombra);
+  transition: all .4s;
+}
+
+@media (min-width: 768px) {
+  .card:hover{
+    box-shadow: 0 0 2.6rem -0.25rem var(--colorSombra);
+  }
 }
 
 .imagen-proyecto{
@@ -566,7 +576,7 @@ a{
   transition-duration: .4s;
 }
 
-.imagen-proyecto img:hover{
+.imagen-proyecto:hover img{
   cursor: pointer;
   transform: scale(1.2);
 }
@@ -604,8 +614,8 @@ a{
 .btn-proyecto,
 .btn-git{
   color: var(--blanco);
-  padding: .8rem 1.8rem;
-  font-size: 1.6rem;
+  padding: .8rem 1.9rem;
+  font-size: 1.5rem;
   font-weight: bold;
   transition-property: all;
   transition-duration: .4s;
@@ -614,6 +624,14 @@ a{
   display: flex;
   align-items: center;
   gap: .7rem;
+}
+
+@media (min-width: 768px) {
+  .btn-proyecto,
+  .btn-git{
+    font-size: 1.4rem;
+    padding: 1.5rem 1.9rem;
+  }
 }
 
 .btn-proyecto{
@@ -639,7 +657,7 @@ a{
 
 .bloque-grid{
   display: grid;
-  grid-template-columns: repeat( 4, 290px);
+  grid-template-columns: repeat( 5, 290px);
   column-gap: 2rem;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -652,7 +670,7 @@ a{
 
 @media (min-width: 768px) {
   .bloque-grid{
-    grid-template-columns: repeat(2, 330px);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
     justify-content: center;
     align-items: center;
