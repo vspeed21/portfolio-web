@@ -3,13 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const formulario = document.querySelector('#form');
-formulario.addEventListener('submit', validarForm)
+formulario.addEventListener('submit', validarForm);
+
 
 function iniciarApp() {
   burgerClick();
   writeStrings();
   acordeon();
-  tabs()
+  tabs();
+  scrollNav();
+  ingresarYear();
+
+  // Da problemas el return del form
   validarForm();
 }
 
@@ -165,4 +170,24 @@ function alerta(mensaje, tipo) {
     }, 2500);
   }
 
+}
+
+function scrollNav() {
+  const enlaces = document.querySelectorAll('.enlace');
+  
+  enlaces.forEach( enlace => {
+    enlace.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const seccion = document.querySelector(e.target.attributes.href.value);
+      console.log(seccion);
+      seccion.scrollIntoView({behavior: 'smooth'});
+    })
+  })
+}
+
+function ingresarYear() {
+  const year = document.querySelector('#year');
+  const today = new Date()
+  year.textContent = today.getFullYear()
 }

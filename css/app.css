@@ -948,3 +948,7 @@ a{
   color: rgb(77 124 15);
   border-left: 4px solid  rgb(54 83 20);;
 }
+
+#year{
+  font-weight: bold;
+}
