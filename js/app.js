@@ -20,7 +20,7 @@ function iniciarApp() {
 
 function burgerClick() {
   const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-menu')
+  const nav = document.querySelector('.nav-menu');
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
@@ -32,7 +32,7 @@ function writeStrings() {
   const options = {
     strings:[ 
       '<i class="nombre">Victor Torres</i>',
-      '<i class="nombre">Desarrollador web Jr</i>',
+      '<i class="nombre">Desarrollador web</i>',
       '<i class="nombre">Maquetador web</i>'
     ],
     loop: true,
@@ -110,7 +110,7 @@ function validarForm(e) {
     }, 2500);
     return;
   }else{
-    alerta('todo cool')
+    alerta('¡Mensaje enviado!')
   }
 
   const datos ={
@@ -174,10 +174,15 @@ function alerta(mensaje, tipo) {
 
 function scrollNav() {
   const enlaces = document.querySelectorAll('.enlace');
+  const nav = document.querySelector('.nav-menu');
+  const burger = document.querySelector('.burger');
   
   enlaces.forEach( enlace => {
     enlace.addEventListener('click', (e) => {
       e.preventDefault();
+      
+      burger.classList.remove('active');
+      nav.classList.remove('nav-menu-desplazado');
 
       const seccion = document.querySelector(e.target.attributes.href.value);
       console.log(seccion);

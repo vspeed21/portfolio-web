@@ -54,7 +54,13 @@ a{
 /* background de toda la pantalla */
 .wrapper{
   height: 100vh;
-  background-color: var(--primario);
+  background: linear-gradient(to bottom, var(--primario) 40%, var(--terciario) 100%);
+}
+
+@media (min-width: 768px) {
+  .wrapper{
+    background: linear-gradient(to right, var(--primario) 60%, var(--terciario) 100%);
+  }
 }
 
 /* Header */
@@ -211,15 +217,17 @@ a{
 }
 
 .inicio-flex{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
   .inicio-flex{
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: flex-start;
   }
 }
 
@@ -306,23 +314,14 @@ a{
   }
 }
 
-/* Acordeon */
-/* .acordeon-contenedor{
-  background-color: #fff;
-  box-shadow: 0px 25px 60px -30px rgb(0 0 0 / 0.25);
-  max-height: 50rem;
-  padding: 2rem;
-}
 
-@media (min-width: 768px) {
-  .acordeon-contenedor{
-    max-height: 30rem;
-  }
-} */
 
 .acordeon{
   background-color: var(--blanco);
-  /* padding: 2rem; */
+}
+
+.bloque.active .contenido{
+  transition: all .3;
 }
 
 .bloque.active .contenido{
@@ -360,9 +359,6 @@ a{
   padding: 0rem;
   overflow: hidden;
   height: 0;
-  /* transition-property: height;
-  transition-duration: 1s;
-  transition-timing-function: ease; */
 }
 
 .contenido p{
@@ -378,20 +374,20 @@ a{
 
 /* Skills */
 .skills{
-  background-color: var(--primario);
-  padding: 2rem;
+  background: linear-gradient(to right, var(--primario) 40%, var(--terciario) 100%);
+  padding-block: 10rem;
 }
 
 .skills-flex{
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
   gap: 3rem;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
  .skills-flex{
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
  } 
 }
 
@@ -545,12 +541,13 @@ a{
 
 @media (min-width: 1200px) {
   .contenido-pestanas{
-    min-height: 60rem;
+    min-height: 65rem;
   }
 }
 
 .contenido-pestanas .bloque {
   opacity: 0;
+  overflow: hidden;
   transition-property: opacity;
   transition-duration: .4s;
   position: absolute;
@@ -558,6 +555,7 @@ a{
 
 .contenido-pestanas .bloque.active {
   opacity: 1;
+  overflow: visible;
 }
 
 /* Card proyectos */
@@ -637,7 +635,7 @@ a{
 .btn-git{
   color: var(--blanco);
   padding: .8rem 1.9rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   transition-property: all;
   transition-duration: .4s;
@@ -651,7 +649,6 @@ a{
 @media (min-width: 768px) {
   .btn-proyecto,
   .btn-git{
-    font-size: 1.4rem;
     padding: 1.5rem 1.9rem;
   }
 }
@@ -709,7 +706,7 @@ a{
 
 /* Contact */
 .form-contenedor{
-  background: linear-gradient(to bottom, var(--primario) 50%, var(--terciario) 100%);
+  background: linear-gradient(to bottom, var(--primario) 40%, var(--terciario) 100%);
   padding: 4rem 2rem 2rem 4rem;
   display: grid;
   justify-content: center;
@@ -851,6 +848,26 @@ a{
   background-color: var(--blanco);
   padding-block: 4rem;
   margin-top: 3rem;
+
+  position: relative;
+}
+
+.btn-flotante{
+  position: absolute;
+  right: 5rem;
+  bottom: 1rem;
+
+  display: block;
+  background-color: var(--blanco);
+  border-radius: .5rem;
+  padding: .3rem;
+  color: var(--negro);
+  cursor: pointer;
+}
+
+.btn-flotante:hover{
+  
+  box-shadow: 3px 3px 150px 4px rgba(0,0,0,0.48);
 }
 
 .footer-flex{
