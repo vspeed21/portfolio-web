@@ -2,11 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
   iniciarApp();
 });
 
+const formulario = document.querySelector('#form');
+formulario.addEventListener('submit', validarForm)
+
 function iniciarApp() {
   burgerClick();
   writeStrings();
   acordeon();
   tabs()
+  validarForm();
 }
 
 function burgerClick() {
@@ -68,4 +72,97 @@ function tabs() {
       bloques[i].classList.add('active')
     })
   });
+}
+
+function validarForm(e) {
+  e.preventDefault()
+
+  const er = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
+  //Campos del form
+  const nombre = document.querySelector('#nombre').value;
+  const email = document.querySelector('#email').value;
+  const celular = document.querySelector('#celular').value;
+  const mensaje = document.querySelector('#mensaje').value;
+  
+  //Validacion de campos
+  if([nombre, celular, mensaje].includes('')) {
+    alerta('Todos los campos son obligatorios', 'error');
+    return;
+  }
+
+  if(!er.test(email)) {
+    const campo = document.querySelector('.campo:nth-child(3)')
+    const divAlerta = document.createElement('div');
+    divAlerta.textContent = 'Email no valido';
+
+    divAlerta.classList.add('alerta', 'error');
+    campo.appendChild(divAlerta);
+
+    setTimeout(() => {
+      divAlerta.remove()
+    }, 2500);
+    return;
+  }else{
+    alerta('todo cool')
+  }
+
+  const datos ={
+    nombre,
+    email,
+    celular,
+    mensaje
+  }
+
+  nombre === ''
+  email === ''
+  celular === ''
+  mensaje === ''
+
+  enviarDatos(datos);
+}
+
+async function enviarDatos(datos) {
+  try {
+    const url = 'http://localhost:4000/Clientes'
+
+    const response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(datos),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    result = await response.json();
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function alerta(mensaje, tipo) {
+  const alerta = document.querySelector('.alerta');
+
+  if(!alerta) {
+    const campo = document.querySelector('.campo')
+    const divAlerta = document.createElement('div');
+    divAlerta.textContent = mensaje;
+
+    divAlerta.classList.add('alerta');
+
+    if(tipo) {
+      divAlerta.classList.add('error');
+    }else{
+      divAlerta.classList.add('succes')
+    }
+
+    formulario.insertBefore(divAlerta, campo);
+    
+    setTimeout(() => {
+      divAlerta.remove()
+    }, 2500);
+  }
+
 }

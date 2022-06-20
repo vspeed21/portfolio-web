@@ -1,0 +1,25 @@
+{
+  "Clientes": [
+    {
+      "nombre": "FAJSLDF",
+      "email": "dfsadf@fasd.com",
+      "celular": "adfa",
+      "mensaje": "afda",
+      "id": 1
+    },
+    {
+      "nombre": "asdfd",
+      "email": "asdfa@sads.com",
+      "celular": "adsfa",
+      "mensaje": "adfa",
+      "id": 2
+    },
+    {
+      "nombre": "sadfs",
+      "email": "afdads@fds.com",
+      "celular": "fasdf",
+      "mensaje": "adf",
+      "id": 3
+    }
+  ]
+}
