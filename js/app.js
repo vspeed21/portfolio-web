@@ -13,9 +13,25 @@ function iniciarApp() {
   tabs();
   scrollNav();
   ingresarYear();
+  darkMode();
 
   // Da problemas el return del form
   validarForm();
+}
+
+function darkMode() {
+  const darkIcon = document.querySelector('.dark-mode-btn');
+  const body = document.querySelector('body');
+
+  darkIcon.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    const nav = document.querySelector('.nav-menu');
+    const burger = document.querySelector('.burger');
+      
+    burger.classList.remove('active');
+    nav.classList.remove('nav-menu-desplazado');
+  })
 }
 
 function burgerClick() {
