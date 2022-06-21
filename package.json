@@ -18,5 +18,8 @@
   "homepage": "https://github.com/vspeed21/portfolio-web#readme",
   "devDependencies": {
     "json-server": "^0.17.0"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.12"
   }
 }

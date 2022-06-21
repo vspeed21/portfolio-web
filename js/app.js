@@ -14,16 +14,18 @@ function iniciarApp() {
   scrollNav();
   ingresarYear();
   darkMode();
+  // swiperCards();
 
   // Da problemas el return del form
   validarForm();
 }
 
+
 function darkMode() {
   const darkIcon = document.querySelector('.dark-mode-btn');
   const body = document.querySelector('body');
 
-  const preferences = window.matchMedia('prefers-color-scheme: dark');
+  const preferences = window.matchMedia('(prefers-color-scheme: dark)');
   // console.log(preferences.matches);
 
   if(preferences.matches) {
@@ -75,7 +77,7 @@ function writeStrings() {
 
   }
 
-  const typed = new Typed('#typed', options);
+  const typed = new Typed('.typed', options);
 }
 
 function acordeon() {
@@ -153,17 +155,13 @@ function validarForm(e) {
     mensaje
   }
 
-  nombre === ''
-  email === ''
-  celular === ''
-  mensaje === ''
-
   enviarDatos(datos);
+  formulario.reset()
 }
 
 async function enviarDatos(datos) {
   try {
-    const url = 'http://localhost:4000/Clientes'
+    const url = 'https://my-json-server.typicode.com/vspeed21/portfolio-web/Clientes';
 
     const response = await fetch(url, {
       method: 'POST',

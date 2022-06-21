@@ -368,6 +368,7 @@ a{
   padding: 0rem;
   overflow: hidden;
   height: 0;
+  transition: padding .3s;
 }
 
 .contenido p{
@@ -685,7 +686,7 @@ a{
 
 .bloque-grid{
   display: grid;
-  grid-template-columns: repeat( 5, 290px);
+  grid-template-columns: repeat( 4, 290px);
   column-gap: 2rem;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -698,11 +699,10 @@ a{
 
 @media (min-width: 768px) {
   .bloque-grid{
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
     overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -716,7 +716,7 @@ a{
 /* Contact */
 .form-contenedor{
   background: linear-gradient(to bottom, var(--primario) 40%, var(--terciario) 100%);
-  padding: 4rem 2rem 2rem 4rem;
+  padding: 4rem 2rem;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -728,6 +728,7 @@ a{
     background: linear-gradient(to right, var(--primario) 50%, var(--terciario) 100%);
     grid-template-columns: 2fr 4fr;
     gap: 2rem;
+    padding: 4rem 10rem 2rem 4rem;
   }
 }
 
@@ -979,6 +980,10 @@ a{
 
 .dark-mode .titular{
   background-color: var(--secundarioOscuro);
+}
+
+.dark-mode .titular:hover{
+  background-color: var(--terciario);
 }
 
 .dark-mode .sobremi-contenedor,
