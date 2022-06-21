@@ -17,113 +17,6 @@
   --darkBg2: #5E5E5E;
 }
 
-/* Dark Mode */
-.dark-mode-btn{
-  color: var(--blanco);
-  cursor: pointer;
-  transition-property: color;
-  transition-duration: .3s;
-}
-
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode .pestanas li{
-  color: var(--darkLetra);
-}
-
-.dark-mode-btn:hover{
-  color: var(--negro);
-}
-
-.dark-mode{
-  background-color: var(--dark);
-}
-
-
-.dark-mode .titular{
-  background-color: var(--secundarioOscuro);
-}
-
-.dark-mode .sobremi-contenedor,
-.dark-mode .pestanas,
-.dark-mode .card,
-.dark-mode .formulario{
-  background-color: var(--darkBg);
-}
-
-.dark-mode .card{
-  box-shadow: -3px 1px 30px -4px rgba(255,255,255,0.29);;
-}
-
-.dark-mode .card:hover{
-  box-shadow: unset;
-}
-
-.dark-mode .contenido{
-  background-color: var(--darkBg2);
-  color: var(--darkLetra);
-}
-
-.dark-mode input,
-.dark-mode textarea{
-  background-color: var(--darkBg2);
-}
-
-.dark-mode input::placeholder,
-.dark-mode textarea::placeholder{
-  color: var(--darkLetra);
-  font-weight: bold;
-  color: var(--darkLetra);
-}
-
-.dark-mode label,
-.dark-mode .descripcion p{
-  color: var(--darkLetra);
-}
-
-.dark-mode .btn-form{
-  background-color: var(--secundarioOscuro);
-}
-
-.dark-mode .footer {
-  background-color: var(--darkBg2);
-  color: var(--darkLetra);
-}
-
-.dark-mode .footer a{
-  color: var(--darkLetra);
-}
-
-.dark-mode .footer a:hover{
-  color: var(--darkBg2);
-}
-
-.dark-mode .wrapper,
-.dark-mode .skills,
-.dark-mode .form-contenedor{
-  background: linear-gradient(to bottom, var(--primarioOscuro) 50%, var(--terciario) 100%);
-}
-
-@media (min-width: 768px) {
-  .dark-mode .wrapper,
-  .dark-mode .skills,
-  .dark-mode .form-contenedor{
-    background: linear-gradient(to right, var(--primarioOscuro) 50%, var(--terciario) 100%);
-  }
-}
-
-.dark-mode .skills-nombre p{
-  color: var(--darkLetra);
-}
-
-.dark-mode .progress::after{
-  background-color: var(--terciario);
-}
-
-.dark-mode .progress{
-  background-color: var(--darkBg2);
-}
-
 /* Generales y formateo de fuente*/
 html{
   box-sizing: border-box;
@@ -646,18 +539,18 @@ a{
 
 .contenido-pestanas{
   position: relative;
-  min-height: 60rem;
+  min-height: 70rem;
 }
 
 @media (min-width: 768px) {
   .contenido-pestanas{
-    min-height: 130rem;
+    min-height: 120rem;
   }
 }
 
 @media (min-width: 1200px) {
   .contenido-pestanas{
-    min-height: 65rem;
+    min-height: 60rem;
   }
 }
 
@@ -1061,7 +954,124 @@ a{
   font-size: 1.7rem;
 }
 
+/* Dark Mode */
+.dark-mode-btn{
+  color: var(--blanco);
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: .3s;
+}
 
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode .pestanas li{
+  color: var(--darkLetra);
+}
+
+.dark-mode-btn:hover{
+  color: var(--negro);
+}
+
+.dark-mode{
+  background-color: var(--dark);
+}
+
+
+.dark-mode .titular{
+  background-color: var(--secundarioOscuro);
+}
+
+.dark-mode .sobremi-contenedor,
+.dark-mode .pestanas,
+.dark-mode .card,
+.dark-mode .formulario{
+  background-color: var(--darkBg);
+}
+
+.dark-mode .card{
+  box-shadow: unset;
+}
+
+.dark-mode .card:hover{
+  box-shadow: unset;
+}
+
+.dark-mode .contenido{
+  background-color: var(--darkBg2);
+  color: var(--darkLetra);
+}
+
+.dark-mode input,
+.dark-mode textarea{
+  background-color: var(--darkBg2);
+  color: var(--darkLetra);
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder{
+  color: var(--darkLetra);
+  font-weight: bold;
+  color: var(--darkLetra);
+}
+
+.dark-mode label,
+.dark-mode .descripcion p{
+  color: var(--darkLetra);
+}
+
+.dark-mode .btn-form{
+  background-color: var(--secundarioOscuro);
+}
+
+.dark-mode .footer {
+  background-color: var(--darkBg2);
+  color: var(--darkLetra);
+}
+
+.dark-mode .footer a{
+  color: var(--darkLetra);
+}
+
+.dark-mode .wrapper,
+.dark-mode .skills,
+.dark-mode .form-contenedor{
+  background: linear-gradient(to bottom, var(--primarioOscuro) 50%, var(--terciario) 100%);
+}
+
+@media (min-width: 768px) {
+  .dark-mode .wrapper,
+  .dark-mode .skills,
+  .dark-mode .form-contenedor{
+    background: linear-gradient(to right, var(--primarioOscuro) 50%, var(--terciario) 100%);
+  }
+}
+
+.dark-mode .skills-nombre p{
+  color: var(--darkLetra);
+}
+
+.dark-mode .progress::after{
+  background-color: var(--terciario);
+}
+
+.dark-mode .progress{
+  background-color: var(--darkBg2);
+}
+
+.dark-mode::-webkit-scrollbar{
+  width: .5rem;
+  background-color: var(--darkbg2);
+}
+
+.dark-mode::-webkit-scrollbar-thumb{
+  background-color: var(--negro);
+  border-radius: 2rem;
+}
+
+.dark-mode .bloque-grid::-webkit-scrollbar-thumb{
+  background-color: var(--primarioOscuro);
+  border-radius: 2rem;
+}
 
 /* Clases para JS */
 .alerta{
@@ -1086,4 +1096,14 @@ a{
 
 #year{
   font-weight: bold;
+}
+
+::-webkit-scrollbar{
+  width: .5rem;
+  background-color: var(--darkLetra);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--primario);
+  border-radius: 2rem;
 }

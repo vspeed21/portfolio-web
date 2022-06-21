@@ -23,6 +23,23 @@ function darkMode() {
   const darkIcon = document.querySelector('.dark-mode-btn');
   const body = document.querySelector('body');
 
+  const preferences = window.matchMedia('prefers-color-scheme: dark');
+  // console.log(preferences.matches);
+
+  if(preferences.matches) {
+    body.classList.add('dark-mode');
+  }else{
+    body.classList.remove('dark-mode');
+  }
+
+  preferences.addEventListener('change', () => {
+    if(preferences.matches) {
+      body.classList.add('dark-mode');
+    }else{
+      body.classList.remove('dark-mode');
+    }
+  })
+
   darkIcon.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 
