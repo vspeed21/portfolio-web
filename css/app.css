@@ -381,6 +381,29 @@ a{
   margin-top: 1rem;
 }
 
+.downlad-cv{
+  display: flex;
+  justify-content: start;
+}
+
+.downlad-cv a{
+  background-color: #0083DB;
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  display: block;
+  margin-top: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: .5rem;
+  transition-property: background-color;
+  transition-duration: .3s;
+}
+
+.downlad-cv a:hover {
+  background-color: var(--secundario);
+}
+
 
 /* Skills */
 .skills{
