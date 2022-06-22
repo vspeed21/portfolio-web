@@ -101,7 +101,7 @@
             <div class="contenido">
               <p>En mi tiempo libre me gusta:</p>
               <ul>
-                <li>Mirar Netflix</li>
+                <li>Aprender una nueva tecnologia</li>
                 <li>Escuchar musica</li>
               </ul>
             </div>
@@ -175,30 +175,31 @@
         <div class="bloque active ">
           <div class="bloque-grid">
             <div class="card">  
-              <h3>Audifonos TechPro</h3>
+              <h3>Speed Homepage</h3>
               <a 
-                href="https://audifonos-techpro-vt.netlify.app" 
+                href="https://speedhomepage.netlify.app" 
                 class="imagen-proyecto"
                 target="_blank"
               >
-                <img src="img/proyectos-css/audifonos.png" alt="imagen proyecto">
+                <img src="img/proyectos-css/speedhomepage.png" alt="imagen proyecto">
               </a>
   
               <div class="tecnologias">
                 <img src="img/html.png" alt="logo tecnologia">
                 <img src="img/css.png" alt="logo tecnologia">
+                <img src="img/logo-js.png" alt="logo tecnologia">
               </div>
   
               <div class="descripcion">
-                <p>Una simple pagina estatica de unos auriculares en oferta.</p>
+                <p>Una compañia que se dedica a desarrollar sitios web.</p>
               </div>
   
               <div class="botones">
-                <a href="https://audifonos-techpro-vt.netlify.app" class="btn-proyecto" target="_blank">
+                <a href="https://speedhomepage.netlify.app" class="btn-proyecto" target="_blank">
                   <span class="material-symbols-outlined">search</span>
                   <span>Ver proyecto</span>
                 </a>
-                <a href="https://github.com/vspeed21/Audifonos-techPro" class="btn-git">
+                <a href="https://github.com/vspeed21/homepage-speed" class="btn-git">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
@@ -516,8 +517,8 @@
   <div class="form-contenedor" id="contacto">
     <div class="info-contacto contenedor">
       <div class="texto">
-        <p>¿Quieres hacer un proyecto juntos?
-        <span class="contactame">Contactame</span>
+        <p>¿Quiere hacer un buen proyecto?
+        <span class="contactame">Hagamoslo juntos</span>
         </p>
       </div>
 
@@ -532,33 +533,39 @@
     </div>
 
     <form class="formulario contenedor" id="form">
-      <div class="campo">
-        <label for="nombre">Nombre</label>
+      <div class="input-group">
         <input 
-        type="text" 
-        id="nombre"
-        placeholder="Escribe tu nombre"
-        >
+          required=""
+          type="text" 
+          class="input">
+        <label class="user-label">First Name</label>
       </div>
-      <div class="campo">
-        <label for="celular">Celular</label>
+      <div class="input-group">
         <input 
-        type="tel" 
-        id="celular"
-        placeholder="Escribe tu numero de celular"
+          class="input"
+          required=""
+          type="tel" 
+          id="celular"
         >
+        <label for="celular" class="user-label">Celular</label>
       </div>
-      <div class="campo">
-        <label for="email">Correo electronico</label>
+      <div class="input-group">
         <input 
-        type="email" 
-        id="email"
-        placeholder="Escribe tu email"
+          class="input"
+          required=""
+          type="email" 
+          id="email"
         >
+        <label for="email" class="user-label">Correo electronico</label>
       </div>
-      <div class="campo">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" cols="20" rows="10" placeholder="Escribe un mensaje"></textarea>
+      <div class="input-group">
+        <input
+          class="input input-mensaje"
+          required=""
+          type="text"
+          id="mensaje"
+        />
+        <label for="mensaje" class="user-label">Mensaje</label>
       </div>
 
       <div class="btn-form-div">
