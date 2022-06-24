@@ -86,14 +86,17 @@ function acordeon() {
 
   titulares.forEach( (titular, i) => {
     titular.addEventListener('click', () => {
-
-      bloques.forEach( bloque => {
-        bloque.classList.remove('active');
-      });
-
-      bloques[i].classList.add('active');
+      
+      if(bloques[i].classList.contains('active')) {
+        bloques[i].classList.remove('active')
+      }else{
+        bloques.forEach( bloque => {
+          bloque.classList.remove('active');
+        });
+        bloques[i].classList.add('active');
+      }
     })
-  })
+  });
 }
 
 function tabs() {

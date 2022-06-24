@@ -356,9 +356,14 @@ a{
 .titular::after{
   content: '+';
   position: absolute;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   top: 25%;
   right: 2rem;
+}
+
+.bloque.active .titular::after{
+  content: '-';
+  font-weight: bold;
 }
 
 .contenido{
