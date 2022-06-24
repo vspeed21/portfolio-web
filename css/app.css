@@ -1028,6 +1028,30 @@ a{
   font-size: 1.7rem;
 }
 
+.flex-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 768px) {
+  .flex-footer{
+    justify-content: end;
+  }
+}
+
+.flex-footer a{
+  opacity: .6;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+
+.flex-footer a:hover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
 /* Dark Mode */
 .dark-mode-btn{
   color: var(--blanco);
