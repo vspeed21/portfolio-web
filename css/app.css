@@ -410,6 +410,12 @@ a{
   background-color: var(--secundario);
 }
 
+.imagen-about{
+  height: 20rem;
+  margin: 0 auto;
+  border-radius: .5rem;
+}
+
 
 /* Skills */
 .skills{
