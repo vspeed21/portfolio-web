@@ -489,12 +489,17 @@ a{
 
 .progress.js::after{
   content: '';
-  width: 40%;
+  width: 45%;
 }
 
 .progress.react::after{
   content: '';
   width: 20%;
+}
+
+.progress.mysql::after{
+  content: '';
+  width: 30%;
 }
 
 /* tabs & proyectos */
