@@ -79,13 +79,6 @@ a{
   align-items: center;
 }
 
-.titulo{
-  font-family: 'Caveat', sans-serif;
-  color: #FFF;
-  margin-top: 1rem;
-  font-size: 5rem;
-}
-
 /* Para abrir menu en movil */
 .burger{
   background-color: var(--secundario);
