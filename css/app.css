@@ -522,7 +522,6 @@ a{
 }
 
 .pestanas li{
-  /* padding: .3rem; */
   font-size: 1.6rem;
   border-radius: .3rem;
   cursor: pointer;
@@ -588,15 +587,9 @@ a{
   min-height: 70rem;
 }
 
-@media (min-width: 768px) {
-  .contenido-pestanas{
-    min-height: 120rem;
-  }
-}
-
 @media (min-width: 1200px) {
   .contenido-pestanas{
-    min-height: 60rem;
+    min-height: 65rem;
   }
 }
 
@@ -914,6 +907,14 @@ a{
   font-weight: bold;
 }
 
+.celular img{
+  width: 2.5rem;
+}
+
+.email img{
+  width: 2rem;
+}
+
 @media (min-width: 768px) {
   .email,
   .celular{
@@ -922,7 +923,7 @@ a{
 }
 
 .celular{
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 /* footer */
@@ -1100,6 +1101,10 @@ a{
   background-color: var(--secundarioOscuro);
 }
 
+.dark-mode .btn-form:hover{
+  background-color: var(--terciario);
+}
+
 .dark-mode .footer {
   background-color: var(--darkBg2);
   color: var(--darkLetra);
@@ -1110,15 +1115,23 @@ a{
 }
 
 .dark-mode .wrapper,
-.dark-mode .skills,
-.dark-mode .form-contenedor{
+.dark-mode .skills{
   background: linear-gradient(to bottom, var(--primarioOscuro) 50%, var(--terciario) 100%);
+}
+
+.dark-mode .form-contenedor{
+  background: linear-gradient(to bottom, var(--terciario) 50%, var(--primarioOscuro) 100%);
+}
+
+@media (min-width: 768px) {
+  .dark-mode .form-contenedor{
+    background: linear-gradient(to right, var(--terciario) 50%, var(--primarioOscuro) 100%);
+  }
 }
 
 @media (min-width: 768px) {
   .dark-mode .wrapper,
-  .dark-mode .skills,
-  .dark-mode .form-contenedor{
+  .dark-mode .skills{
     background: linear-gradient(to right, var(--primarioOscuro) 50%, var(--terciario) 100%);
   }
 }
